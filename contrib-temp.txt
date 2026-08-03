@@ -1,2 +1,4 @@
 ﻿Commit: feat: add shopping cart functionality 
 
+Commit: fix: correct product price calculation 
+
