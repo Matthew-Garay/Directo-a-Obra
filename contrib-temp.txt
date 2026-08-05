@@ -2,3 +2,5 @@
 
 Commit: fix: correct product price calculation 
 
+Commit: docs: add database schema documentation 
+
