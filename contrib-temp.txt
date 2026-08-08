@@ -4,3 +4,5 @@ Commit: fix: correct product price calculation
 
 Commit: docs: add database schema documentation 
 
+Commit: chore: update .gitignore to exclude configproducts.php 
+
