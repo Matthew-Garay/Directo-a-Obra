@@ -6,3 +6,5 @@ Commit: docs: add database schema documentation
 
 Commit: chore: update .gitignore to exclude configproducts.php 
 
+Commit: feat: integrate PHPMailer for email notifications 
+
