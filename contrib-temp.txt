@@ -10,3 +10,5 @@ Commit: feat: integrate PHPMailer for email notifications
 
 Commit: fix: resolve checkout redirect issue 
 
+Commit: docs: add installation guide in docs/ 
+
