@@ -12,3 +12,5 @@ Commit: fix: resolve checkout redirect issue
 
 Commit: docs: add installation guide in docs/ 
 
+Commit: refactor: improve database connection handling 
+
