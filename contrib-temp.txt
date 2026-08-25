@@ -14,3 +14,5 @@ Commit: docs: add installation guide in docs/
 
 Commit: refactor: improve database connection handling 
 
+Commit: feat: add product categories filtering 
+
