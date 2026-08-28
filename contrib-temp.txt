@@ -16,3 +16,5 @@ Commit: refactor: improve database connection handling
 
 Commit: feat: add product categories filtering 
 
+Commit: chore: update .env.example with payment keys placeholders 
+
