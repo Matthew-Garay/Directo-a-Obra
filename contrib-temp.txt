@@ -18,3 +18,5 @@ Commit: feat: add product categories filtering
 
 Commit: chore: update .env.example with payment keys placeholders 
 
+Commit: fix: resolve mobile responsive layout issues 
+
