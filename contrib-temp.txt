@@ -22,3 +22,5 @@ Commit: fix: resolve mobile responsive layout issues
 
 Commit: docs: add architecture decision records 
 
+Commit: feat: add order completion page 
+
