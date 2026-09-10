@@ -24,3 +24,5 @@ Commit: docs: add architecture decision records
 
 Commit: feat: add order completion page 
 
+Commit: chore: update composer dependencies 
+
