@@ -26,3 +26,5 @@ Commit: feat: add order completion page
 
 Commit: chore: update composer dependencies 
 
+Commit: fix: resolve session handling bug 
+
