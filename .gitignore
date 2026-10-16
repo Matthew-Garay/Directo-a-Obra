@@ -1,0 +1,16 @@
+# Archivos con credenciales y claves sensibles (no subir a GitHub)
+configuracion/configproducts.php
+
+# Entornos y dependencias locales
+vendor/
+node_modules/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
