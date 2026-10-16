@@ -1,0 +1,12 @@
+# Asignación de revisores automáticos por área de código
+
+# Documentación
+/docs/ @Matthew-Garay
+
+# Código PHP raíz
+*.php @Matthew-Garay
+
+# Archivos de configuración y CI/CD
+.github/ @Matthew-Garay
+.editorconfig @Matthew-Garay
+.gitignore @Matthew-Garay

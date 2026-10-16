@@ -1,0 +1,38 @@
+name: Solicitud de funcionalidad
+description: Sugiere una nueva idea o mejora para este proyecto
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Gracias por sugerir una mejora ✨"
+  - type: input
+    id: descripcion
+    attributes:
+      label: Descripción de la funcionalidad
+      description: Una descripción clara y concisa de la característica que te gustaría ver.
+      placeholder: Ej. Agregar filtro de productos por precio
+    validations:
+      required: true
+  - type: input
+    id: motivacion
+    attributes:
+      label: Motivación
+      description: ¿Está relacionada con un problema? Por ejemplo: "Me frustra cuando..."
+    validations:
+      required: false
+  - type: input
+    id: solucion
+    attributes:
+      label: Solución propuesta
+      description: Describe cómo te gustaría que funcionara.
+      placeholder: Ej. Un dropdown con rangos de precio en la página de productos
+    validations:
+      required: false
+  - type: checkboxes
+    id: terminos
+    attributes:
+      label: Confirmación
+      options:
+        - label: He revisado que no exista una sugerencia similar abierta
+          required: true
