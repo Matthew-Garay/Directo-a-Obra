@@ -1,0 +1,49 @@
+name: Reporte de error
+description: Crea un reporte para ayudarnos a mejorar el proyecto
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Gracias por tomarte el tiempo de reportar este error 🐛"
+  - type: input
+    id: descripcion
+    attributes:
+      label: Descripción del error
+      description: Una descripción clara y concisa de qué está pasando.
+      placeholder: Ej. Al hacer clic en el botón de enviar, la página se congela
+    validations:
+      required: true
+  - type: input
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      description: Pasos detallados para reproducir el comportamiento.
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer clic en '....'
+        3. Ver el error
+    validations:
+      required: true
+  - type: input
+    id: esperado
+    attributes:
+      label: Comportamiento esperado
+      description: ¿Qué esperabas que sucediera?
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno
+      description: Sistema operativo, navegador, versión del proyecto, etc.
+      placeholder: Windows 11, Chrome v120, PHP 8.2, XAMPP
+    validations:
+      required: true
+  - type: checkboxes
+    id: terminos
+    attributes:
+      label: Confirmación
+      options:
+        - label: He revisado que no exista un issue similar abierto
+          required: true

@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Validar archivos YAML de GitHub Actions
+        run: |
+          for f in .github/workflows/*.yml .github/workflows/*.yaml .github/ISSUE_TEMPLATE/*.yml; do
+            if [ -f "$f" ]; then
+              python3 -c "import yaml, sys; yaml.safe_load(open('$f'))" && echo "OK: $f" || echo "ERROR: $f"
+            fi
+          done
+
+      - name: Verificar estructura del proyecto PHP
+        run: |
+          echo "Verificando archivos esenciales..."
+          test -f Index.php && echo "Index.php presente" || echo "Falta Index.php"
+          test -f configuracion/database.php && echo "configuracion/database.php presente" || echo "Falta configuracion/database.php"
+          test -f README.md && echo "README.md presente" || echo "Falta README.md"
