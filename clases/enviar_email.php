@@ -17,15 +17,15 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = '1911.garay.perez@gmail.com';                     //SMTP username
-    $mail->Password   = 'hnigzlfurzqsvjup';                               //SMTP password
+    $mail->Username   = getenv('SMTP_USERNAME') ?: 'tu_usuario@gmail.com';    //SMTP username
+    $mail->Password   = getenv('SMTP_PASSWORD') ?: 'tu_contraseña_de_aplicacion'; //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('1911.garay.perez@gmail.com', 'Directo a Obra');
     $mail->addAddress($email, 'Cliente');     //Usar el correo del cliente
-    $mail->addBCC('mxtthxw29@gmail.com', 'Administrador Garay');     //Copia oculta al administrador
+    $mail->addBCC(getenv('ADMIN_BCC') ?: 'admin@ejemplo.com', 'Administrador');     //Copia oculta al administrador
 
     $mail->isHTML(true);
     $mail->Subject = 'Factura de su compra - Directo a Obra';
@@ -34,7 +34,7 @@ try {
     $cuerpo = '
     <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 5px; overflow: hidden;">
         <!-- Encabezado -->
-        <div style="background: linear-gradient(to right, #1a85f8, #0967d3); color: white; padding: 20px; text-align: center;">
+        <div style="background: #1a85f8; color: white; padding: 20px; text-align: center;">
             <h1 style="margin: 0;">Directo a Obra</h1>
             <p style="margin: 5px 0 0;">Factura de Compra</p>
         </div>
